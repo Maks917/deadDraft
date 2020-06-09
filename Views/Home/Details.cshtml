@@ -1,0 +1,35 @@
+﻿@model deadDraft.Models.ToDo
+
+<br />
+<div class="row justify-content-center col-sm-6">
+    <div class="col-sm-10">
+        <div class="card">
+            <div class="card-header  text-center">
+                <h3>@Model.Title</h3>
+            </div>
+
+            <div class="card-body text-center">
+                <h5>ID: @Model.Id</h5>
+                <h5>Title: @Model.Title</h5>
+                <h5>Duty: @Model.Duty</h5>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="home" asp-action="Index" class="btn btn-warning btn-sm">Back</a>
+                <a asp-controller="home" asp-action="Edit" asp-route-id=@Model.Id class="btn btn-primary m-1 btn-sm">Edit</a>
+                <a asp-controller="home" asp-action="Delete" asp-route-id=@Model.Id class="btn btn-danger m-1 btn-sm">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/custom.js"></script>
+}
+<style>
+    h3, h4, h5 {
+        font-weight: 400;
+    }
+    /*.btn {
+        border-radius: 0;
+    }*/
+</style>

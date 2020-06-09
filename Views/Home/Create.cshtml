@@ -1,0 +1,33 @@
+﻿@model ToDo
+
+
+<h3 style="font-weight:400">Create Task</h3>
+
+<form asp-controller="home" asp-action="Create" method="post" class="mt-3">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group row">
+        <label asp-for="Title" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Title" class="form-control" placeholder="Title">
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="Duty" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Duty" class="form-control" placeholder="Duty">
+            <span asp-validation-for="Duty" class="text-danger"></span>
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <button style="margin-right:10px;" type="submit" class="btn btn-success btn-sm">Create</button><a asp-action="index" asp-controller="home" class="btn btn-warning btn-sm">Cancel</a>
+        </div>
+    </div>
+</form>
+<h5>hahaha</h5>
