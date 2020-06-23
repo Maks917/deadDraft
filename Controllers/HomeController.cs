@@ -103,6 +103,5 @@ namespace deadDraft.Controllers
 
             return View(model);
         }
-        // test push
     }
 }
